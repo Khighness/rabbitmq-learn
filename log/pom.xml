@@ -9,19 +9,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <developers>
-        <developer>
-            <name>KHighness</name>
-            <email>parakovo@gmail.com</email>
-            <url>https://www.parak.top</url>
-        </developer>
-    </developers>
-
     <modules>
         <module>rabbitmq-client</module>
         <module>springboot-rabbitmq</module>
-        <module>springboot-rabbitmq-deadletter</module>
-        <module>springboot-rabbitmq-delayqueue</module>
+        <module>springboot-deadletter</module>
+        <module>springboot-delayqueue</module>
         <module>springboot-reliable-exchange-transaction</module>
         <module>springboot-reliable-exchange-confirm</module>
         <module>springboot-reliable-queue-mandatory</module>
