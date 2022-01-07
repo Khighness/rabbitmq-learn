@@ -13,7 +13,6 @@ import java.util.concurrent.TimeoutException;
  * @since 2021-05-23
  * @apiNote 生产者
  */
-
 public class Provider {
 
     private static ConnectionFactory connectionFactory;

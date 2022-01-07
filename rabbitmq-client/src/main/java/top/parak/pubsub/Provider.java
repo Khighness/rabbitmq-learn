@@ -11,7 +11,6 @@ import java.util.Scanner;
  * @author KHighness
  * @since 2021-05-24
  */
-
 public class Provider {
     public static void main(String[] args) throws IOException {
         Connection connection = RabbitMQUtil.getConnection();

@@ -11,7 +11,6 @@ import java.io.IOException;
  * @author KHighness
  * @since 2021-05-24
  */
-
 public class Consumer1 {
     private static Logger log = LoggerFactory.getLogger(Consumer1.class);
     public static void main(String[] args) throws IOException {

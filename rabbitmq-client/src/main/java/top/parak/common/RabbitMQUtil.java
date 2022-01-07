@@ -11,14 +11,13 @@ import java.util.concurrent.TimeoutException;
  * @author KHighness
  * @since 2021-05-24
  */
-
 public class RabbitMQUtil {
     private static volatile ConnectionFactory connectionFactory = null;
     private static final String HOST = "192.168.117.155";
     private static final int PORT = 5672;
     private static final String VIRTUAL_HOST = "/learn";
     private static final String USERNAME = "parak";
-    private static final String PASSWORD = "123456";
+    private static final String PASSWORD = "KAG1823";
 
     public static Connection getConnection() {
         if (connectionFactory == null) {

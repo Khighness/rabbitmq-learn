@@ -12,7 +12,6 @@ import java.util.concurrent.TimeoutException;
  * @since 2021-05-23
  * @apiNote 消费者
  */
-
 public class Consumer {
     private final static Logger log = LoggerFactory.getLogger(Consumer.class);
 
