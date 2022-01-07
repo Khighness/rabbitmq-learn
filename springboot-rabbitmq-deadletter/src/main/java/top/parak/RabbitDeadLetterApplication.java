@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2021-05-25
  */
 @SpringBootApplication
-public class DeadLetterApplication {
+public class RabbitDeadLetterApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DeadLetterApplication.class, args);
+        SpringApplication.run(RabbitDeadLetterApplication.class, args);
     }
 }

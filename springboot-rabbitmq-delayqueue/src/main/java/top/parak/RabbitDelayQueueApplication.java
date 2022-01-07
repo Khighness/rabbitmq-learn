@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2021-05-25
  */
 @SpringBootApplication
-public class DelayQueueApplication {
+public class RabbitDelayQueueApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DelayQueueApplication.class, args);
+        SpringApplication.run(RabbitDelayQueueApplication.class, args);
     }
 }
