@@ -23,31 +23,6 @@ public class DeadLetterConfig {
     public static final String DEAD_LETTER_ROUTING_KEY1 = "parak.dead.letter.death.key1";
     public static final String DEAD_LETTER_ROUTING_KEY2 = "parak.dead.letter.death.key2";
 
-
-    /**
-     * 声明死信交换机
-     */
-    @Bean("deadLetterExchange")
-    public DirectExchange deadLetterExchange() {
-        return new DirectExchange(DEAD_LETTER_EXCHANGE);
-    }
-
-    @Bean("deadLetterQueue1")
-    public Queue deadLetterQueue1() {
-        return new Queue(DEAD_LETTER_QUEUE1);
-    }
-
-    @Bean("deadLetterQueue2")
-    public Queue deadLetterQueue2() {
-        return new Queue(DEAD_LETTER_QUEUE2);
-    }
-
-    @Bean
-    public Binding deadLetterBinding1(@Qualifier("deadLetterQueue1") Queue queue, @Qualifier("deadLetterExchange") DirectExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(DEAD_LETTER_ROUTING_KEY1);
-    }
-
-
     /**
      * 声明业务交换机
      */
@@ -84,6 +59,30 @@ public class DeadLetterConfig {
     @Bean
     public Binding businessBinding2(@Qualifier("businessQueue2") Queue queue, @Qualifier("businessExchange") FanoutExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange);
+    }
+
+
+    /**
+     * 声明死信交换机
+     */
+    @Bean("deadLetterExchange")
+    public DirectExchange deadLetterExchange() {
+        return new DirectExchange(DEAD_LETTER_EXCHANGE);
+    }
+
+    @Bean("deadLetterQueue1")
+    public Queue deadLetterQueue1() {
+        return new Queue(DEAD_LETTER_QUEUE1);
+    }
+
+    @Bean("deadLetterQueue2")
+    public Queue deadLetterQueue2() {
+        return new Queue(DEAD_LETTER_QUEUE2);
+    }
+
+    @Bean
+    public Binding deadLetterBinding1(@Qualifier("deadLetterQueue1") Queue queue, @Qualifier("deadLetterExchange") DirectExchange exchange) {
+        return BindingBuilder.bind(queue).to(exchange).with(DEAD_LETTER_ROUTING_KEY1);
     }
 
     @Bean

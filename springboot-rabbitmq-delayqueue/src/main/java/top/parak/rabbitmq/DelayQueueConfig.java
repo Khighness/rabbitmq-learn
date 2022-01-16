@@ -19,6 +19,7 @@ public class DelayQueueConfig {
     public static final String DELAY_QUEUE2 = "parak.delay.queue.business.queue2";
     public static final String DELAY_QUEUE_ROUTING_KEY1 = "parak.delay.queue.business.key1";
     public static final String DELAY_QUEUE_ROUTING_KEY2 = "parak.delay.queue.business.key2";
+
     public static final String DEAD_LETTER_EXCHANGE = "parak.delay.queue.deadletter.exchange";
     public static final String DEAD_LETTER_QUEUE1 = "parak.delay.queue.deadletter.queue1";
     public static final String DEAD_LETTER_QUEUE2 = "parak.delay.queue.deadletter.queue2";
@@ -141,4 +142,5 @@ public class DelayQueueConfig {
     public Binding delayedMessageBinding(@Qualifier("delayedMessageQueue") Queue queue, @Qualifier("delayedMessageExchange") CustomExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with(DELAYED_MESSAGE_ROUTING_KEY).noargs();
     }
+
 }
